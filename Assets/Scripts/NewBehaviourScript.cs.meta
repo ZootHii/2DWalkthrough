@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 98c0281844ee1bf4aabbcf6dbb752bf6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameOverTrigger: {fileID: 5983705634031878953, guid: 8a5bdb9131fd5664ab14977e95e6ef67, type: 3}
+  - walls: {fileID: 2625053803799043131, guid: 2fbd5ca0b6fb11749a4352a45e11a814, type: 3}
+  - canvas: {fileID: 4705356182427574833, guid: aea58f75f804efb468255b6494bd7c8f, type: 3}
+  - eventSystem: {fileID: 7015786223321198337, guid: b851899b1b7cfad448d84cb38f1ed3a7, type: 3}
+  - scoreController: {fileID: 615441425138727484, guid: 7191d04daaae9904e9480e9ce4f6ceca, type: 3}
+  - sceneController: {fileID: 5207221500629611132, guid: 628bf7743d3e78a4da304c365ccfad11, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
