@@ -2,9 +2,9 @@
  Game class walkthrough
  You can play rigth away from 2DWalkthroughBuild folder
  
- Ahmet Yıldırım
- Mert Rıza Karadeniz
- Kazım Temiz
+ Ahmet Yıldırım<br>
+ Mert Rıza Karadeniz<br>
+ Kazım Temiz<br>
  
  <br>
  <img src="https://user-images.githubusercontent.com/34456517/115124659-fdca4080-9fcb-11eb-970d-e30459e63d7e.png" alt="Girl in a jacket" width="1600" height="600">
