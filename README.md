@@ -1,14 +1,14 @@
 # 2DWalkthrough
- Game class walkthrough
- You can play rigth away from 2DWalkthroughBuild folder<br>
-  Ahmet Yıldırım<br>
+ Game programming class midterm from act1.<br>
+ Exe file can be found in BricksOfHellBuild folder.<br>
+ <h3>Ahmet Yıldırım</h3><br>
  
 Features:
  - 3 Levels
- - Blue bricks gaves 2 points and a new ball
- - Red bricks unbreakable
- - Latest scores in game over screen
- - Good design I think, and moving insects, I can add more
+ - Blue bricks gaves 2 points and a new ball,
+ - Red bricks unbreakable,
+ - Latest scores in game over screen,
+ - Good design I think, and moving insects, I can add more,
  - Some problems solved in first version. <br>
 
  <h3>Some in game screen shots<br>
