@@ -3,10 +3,8 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public static BallController Instance;
-    [SerializeField] private GameObject ballPrefab;
-    public int ballSpeed;
-    public int ballCount;
-    public GameObject currentBall;
+    [SerializeField] private float ballSpeed;
+    [SerializeField] private int ballCount;
 
     private Rigidbody2D ballRigidBody;
 
@@ -22,51 +20,48 @@ public class BallController : MonoBehaviour
 
     private void Update()
     {
+        AvoidBallStuckAndSlow();
+    }
+
+    public void AvoidBallStuckAndSlow()
+    {
         var ballVelocity = ballRigidBody.velocity;
+        float verticalDot = Vector3.Dot(ballVelocity.normalized, Vector3.up);
+        float horizontalDot = Vector3.Dot(ballVelocity.normalized, Vector3.right);
         if (ballVelocity.magnitude != ballSpeed)
         {
             ballRigidBody.velocity = new Vector2(ballVelocity.x, ballVelocity.y).normalized * ballSpeed;
         }
+        if (verticalDot > 0.98 || verticalDot < -0.98) {
+            var loosenedVelocity = Random.insideUnitCircle * ballSpeed;
+            ballRigidBody.velocity += loosenedVelocity;
+        }
+        if (horizontalDot > 0.98 || horizontalDot < -0.98) {
+            var loosenedVelocity = Random.insideUnitCircle * ballSpeed;
+            ballRigidBody.velocity += loosenedVelocity;
+        }
     }
-
-    public void IncreaseBallAmount(int amount = 1)
+    
+    public void IncreaseBallAmount(Vector3 position, int amount = 1)
     {
         for (int i = 0; i < amount; i++)
         {
             ballCount++;
-            GameObject ball;
-            //if (currentBall == null)
-            //{
-                if (Random.Range(0,2) == 1)
-                {
-                    ball = Instantiate(ballPrefab, transform.position + Vector3.left, Quaternion.identity);
-                    currentBall = ball;
-                }
-                else
-                {
-                    ball = Instantiate(ballPrefab, transform.position + Vector3.right, Quaternion.identity);
-                    currentBall = ball;
-                }
-            //}
-            /*else
-            {
-                if (Random.Range(0,2) == 1)
-                {
-                    ball = Instantiate(currentBall, transform.position + Vector3.left, Quaternion.identity);
-                    currentBall = ball;
-                }
-                else
-                {
-                    ball = Instantiate(currentBall, transform.position + Vector3.right, Quaternion.identity);
-                    currentBall = ball;
-                }
-            }*/
-            
+            var ball = Instantiate(gameObject, position, Quaternion.identity);
             ball.GetComponent<Rigidbody2D>().velocity = Vector2.up * ballSpeed;
-            
         }
     }
 
+    public void IncreaseBallSpeed(float amount)
+    {
+        ballSpeed += amount;
+    }
+    
+    public float GetBallSpeed()
+    {
+        return ballSpeed;
+    }
+    
     public int GetBallCount()
     {
         return ballCount;

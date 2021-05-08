@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,7 +9,8 @@ public class ScoreController : MonoBehaviour
     public static ScoreController Instance;
     [SerializeField] private Text textScore;
     private int score;
-    
+    private int blockAmount;
+    private int blueBlockAmount;
     
     private List<int> highScores = new List<int>();
 
@@ -35,24 +35,43 @@ public class ScoreController : MonoBehaviour
     public void IncreaseScore(int amount = 1)
     {
         score += amount;
+        if (score % 6 == 0)
+        {
+            BallController.Instance.IncreaseBallSpeed(0.5f);
+        }
+        int lastScore = 0;
+        if (PlayerPrefs.HasKey("score"))
+        {
+            lastScore = PlayerPrefs.GetInt("score");
+        }
         textScore.text = score.ToString();
-        if (SceneManager.GetActiveScene().name == "Level1" && score == 30)
+        if (SceneManager.GetActiveScene().name == "Level1" && score == blockAmount + blueBlockAmount * 2 + lastScore) // blue blocks gives 2 score
         {
             PlayerPrefs.SetInt("score", score);
             SceneController.Instance.NextLevel(2);
         }
-        else if (SceneManager.GetActiveScene().name == "Level2" && score == 30+31)
+        else if (SceneManager.GetActiveScene().name == "Level2" && score == blockAmount + blueBlockAmount * 2 +lastScore)
         {
             PlayerPrefs.SetInt("score", score);
             SceneController.Instance.NextLevel(3);
         }
-        else if (SceneManager.GetActiveScene().name == "Level3" && score == 61+29)
+        else if (SceneManager.GetActiveScene().name == "Level3" && score == blockAmount + blueBlockAmount * +lastScore)
         {
             Debug.Log("WON");
             SceneManager.LoadScene("Start");
         }
     }
 
+    public void CountBlockAmount()
+    {
+        blockAmount++;
+    }
+    
+    public void CountBlueBlockAmount()
+    {
+        blueBlockAmount++;
+    }
+    
     public int GetScore()
     {
         return score;

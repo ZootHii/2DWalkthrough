@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseController : MonoBehaviour
 {
-    private Camera camera;
+    private Camera cam;
     private bool isBallMoving;
     private Rigidbody2D ballRigidBody;
     [SerializeField] private Transform transformBall;
     [SerializeField] private Vector3 positionBase;
-    
+
     public void Start()
     {
         isBallMoving = false;
-        camera = Camera.main;
+        cam = Camera.main;
         positionBase = transform.position;
         ballRigidBody = GameObject.FindWithTag("Ball").GetComponent<Rigidbody2D>();
     }
@@ -27,7 +25,7 @@ public class BaseController : MonoBehaviour
     private void BaseMoves()
     {
         var mousePosition = Input.mousePosition;
-        var mouseWorldPosition = camera.ScreenToWorldPoint(mousePosition);
+        var mouseWorldPosition = cam.ScreenToWorldPoint(mousePosition);
 
         if (mouseWorldPosition.x >= -10 && mouseWorldPosition.x <= 10)
         {
@@ -45,7 +43,7 @@ public class BaseController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                ballRigidBody.velocity = Vector2.up * BallController.Instance.ballSpeed;
+                ballRigidBody.velocity = Vector2.up * BallController.Instance.GetBallSpeed();
                 isBallMoving = true;
             }
         }

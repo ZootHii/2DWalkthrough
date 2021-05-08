@@ -3,7 +3,8 @@ guid: a83221e3ddcf3bf4fa5f6595abe8a3f9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - redBlockDestroyAudioClip: {fileID: 8300000, guid: a1bec3d55306b9340b352a929adeb6cd, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

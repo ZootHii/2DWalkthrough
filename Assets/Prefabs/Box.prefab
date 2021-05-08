@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7424185847323862230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.85, y: 0.85, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a972d70d8b624d47bd39545c0285a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockDestroyAudio: {fileID: 6137097479746778147, guid: dcb9367ef2fcbff48af479e207d4919e, type: 3}
   blockDestroyAudioClip: {fileID: 8300000, guid: 25308773ab1f0b043ad9fe6fb384262a, type: 3}
 --- !u!61 &-4771377425716878157
 BoxCollider2D:
