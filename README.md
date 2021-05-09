@@ -15,7 +15,7 @@ Features:
  <br>
  <img src="https://user-images.githubusercontent.com/34456517/117553319-897a3e80-b059-11eb-92e6-dab00e8be2cf.png" width="999" height="563">
  <img src="https://user-images.githubusercontent.com/34456517/117553320-8aab6b80-b059-11eb-9cfd-21bf3faf1536.png" width="999" height="563">
- <img src="https://user-images.githubusercontent.com/34456517/117553317-88e1a800-b059-11eb-8a4b-afeeec8892d7.png" width="999" height="563">
+ <img src="https://user-images.githubusercontent.com/34456517/117578915-5d15ff00-b0f9-11eb-9573-6f619e686a03.png" width="999" height="563">
  <img src="https://user-images.githubusercontent.com/34456517/117553511-b4b15d80-b05a-11eb-9484-388cf6a49daf.png" width="999" height="563">
  <img src="https://user-images.githubusercontent.com/34456517/117553512-b549f400-b05a-11eb-94cb-236dd560b582.png" width="999" height="563">
- <img src="https://user-images.githubusercontent.com/34456517/117553510-b418c700-b05a-11eb-9c10-c65f8d844cce.png" width="999" height="563">
+ <img src="https://user-images.githubusercontent.com/34456517/117578923-68692a80-b0f9-11eb-9ed8-d7aa21bbbd3d.png" width="999" height="563">
