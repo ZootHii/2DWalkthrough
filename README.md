@@ -1,6 +1,6 @@
 # 2DWalkthrough
  Game programming class midterm from act1.<br>
- Exe file can be found in BricksOfHellBuild folder.<br>
+ To play the game download BricksOfHellBuild folder.<br>
  <h3>Ahmet Yıldırım</h3><br>
  
 Features:
