@@ -1,3 +1,5 @@
+# Individual work is in the Individual branch
+
 # 2DWalkthrough
  Game class walkthrough
  You can play rigth away from 2DWalkthroughBuild folder
